@@ -12,6 +12,7 @@ public class JohnMovement : MonoBehaviour
     private Animator animator;
     private float horizontal;
     private bool suelo;
+    private int health=5;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,5 +69,12 @@ public class JohnMovement : MonoBehaviour
     void FixedUpdate(){
         rigidbody2D.velocity=new Vector2(horizontal*speed, rigidbody2D.velocity.y);
 
+    }
+
+    public void Hit(){
+        health-=1;
+        if(health==0){
+            Destroy(gameObject);
+        }
     }
 }
