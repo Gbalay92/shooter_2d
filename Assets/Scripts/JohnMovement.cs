@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JohnMovement : MonoBehaviour
 {
+    [SerializeField] GameObject pauseMenu;
     public GameObject BulletPrefab;
     private float lastShoot;
     public float speed;
@@ -13,6 +14,7 @@ public class JohnMovement : MonoBehaviour
     private float horizontal;
     private bool suelo;
     private int health=5;
+    public int bullets=10;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,14 +46,19 @@ public class JohnMovement : MonoBehaviour
         {
             Jump();
         }
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time>lastShoot+0.25f){
+        if(Input.GetKeyDown(KeyCode.Space) && Time.time>lastShoot+0.25f && bullets>0){
             Shoot();
             lastShoot=Time.time;
+        }
+
+        if(transform.position.y < -1.0f){
+            Destroy(gameObject);
         }
     
     }
 
     void Shoot(){
+        bullets=bullets-1;
         Vector3 direction;
         if(transform.localScale.x==1.0f){
             direction = Vector2.right;
@@ -77,4 +84,5 @@ public class JohnMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
