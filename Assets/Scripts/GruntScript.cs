@@ -25,7 +25,6 @@ public class GruntScript : MonoBehaviour
             Shoot();
         }
         
-        
     }
     private void Shoot(){
         Vector3 direction;
