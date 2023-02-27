@@ -8,4 +8,8 @@ public class MainSceneScript : MonoBehaviour
     public void Init(){
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void Exit_Button_Click(){
+        Application.Quit();
+    }
 }

@@ -34,4 +34,14 @@ public class Pause_script : MonoBehaviour
     public void LoadMenu(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ToMainScene(){
+        Resume();
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void Restart(){
+        if(isGamePaused){Resume();}
+        SceneManager.LoadScene("SampleScene");
+    }
 }
