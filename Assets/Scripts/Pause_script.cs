@@ -7,10 +7,15 @@ public class Pause_script : MonoBehaviour
 {
     public static bool isGamePaused = false;
     [SerializeField]public GameObject pause_menu;
+    public JohnMovement john;
+    [SerializeField]public GameObject game_over;
 
 
     void Update()
     {
+        if(john == null && !isGamePaused){
+            GameOver();
+        }
         if (Input.GetKeyDown(KeyCode.Escape)){
             if(isGamePaused){
                 Resume();
@@ -18,6 +23,11 @@ public class Pause_script : MonoBehaviour
                 Pause();
             }
         }
+    }
+    public void GameOver(){
+        game_over.SetActive(true);
+        Time.timeScale=0f;
+        isGamePaused=true;
     }
     public void Resume(){
         pause_menu.SetActive(false);
