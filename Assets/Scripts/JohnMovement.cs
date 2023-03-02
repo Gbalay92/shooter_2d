@@ -18,6 +18,8 @@ public class JohnMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Pause_script.isGamePaused=false;
+        Time.timeScale=1f;
         rigidbody2D=GetComponent<Rigidbody2D>();
         animator=GetComponent<Animator>();
     }

@@ -13,6 +13,9 @@ public class Pause_script : MonoBehaviour
 
     void Update()
     {
+        if(john!=null && !isGamePaused){
+            Resume();
+        }
         if(john == null && !isGamePaused){
             GameOver();
         }
@@ -41,9 +44,7 @@ public class Pause_script : MonoBehaviour
         isGamePaused=true;
     }
 
-    public void LoadMenu(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+
 
     public void ToMainScene(){
         Resume();
