@@ -52,7 +52,6 @@ public class Pause_script : MonoBehaviour
     }
 
     public void Restart(){
-        if(isGamePaused){Resume();}
         SceneManager.LoadScene("SampleScene");
     }
 }
