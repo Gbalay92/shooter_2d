@@ -10,7 +10,6 @@ public class Pause_script : MonoBehaviour
     public JohnMovement john;
     [SerializeField]public GameObject game_over;
 
-
     void Update()
     {
     

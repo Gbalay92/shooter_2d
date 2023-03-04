@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class JohnMovement : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class JohnMovement : MonoBehaviour
     private Animator animator;
     private float horizontal;
     private bool suelo;
-    private int health=5;
+    public int health=5;
     public int bullets=10;
+    public TMP_Text text_health;
+    public TMP_Text text_ammo;
     
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,8 @@ public class JohnMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        text_ammo.text=bullets.ToString();
+        text_health.text=health.ToString();
         horizontal=Input.GetAxisRaw("Horizontal");
 
         if (horizontal<0.0f){
