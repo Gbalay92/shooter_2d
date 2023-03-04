@@ -621,7 +621,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1495378388}
         m_TargetAssemblyTypeName: Pause_script, Assembly-CSharp
-        m_MethodName: ToMainScene
+        m_MethodName: Exit_Button_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -682,6 +682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause_menu: {fileID: 1943981516}
+  john: {fileID: 0}
+  game_over: {fileID: 0}
 --- !u!1 &1623673452
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +924,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause_menu: {fileID: 1943981516}
+  john: {fileID: 0}
+  game_over: {fileID: 0}
 --- !u!1 &1863032972
 GameObject:
   m_ObjectHideFlags: 0

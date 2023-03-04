@@ -49,4 +49,8 @@ public class Pause_script : MonoBehaviour
     public void Restart(){
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void Exit_Button_Click(){
+        Application.Quit();
+    }
 }
